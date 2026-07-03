@@ -16,4 +16,10 @@ export const authController = {
       data: result,
     });
   },
+  async me(request, reply) {
+  return reply.send({
+    success: true,
+    data: request.user,
+  });
+}
 };
